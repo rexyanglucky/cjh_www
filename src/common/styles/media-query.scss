@@ -3,17 +3,17 @@
   margin: 0 auto;
 }
 
-// 当屏幕尺寸大于1200px时
-@media only screen and (min-width: 1200px) {
-  $current-width: 1200px;
+// 当屏幕尺寸大于1360px时
+@media only screen and (min-width: 1360px) {
+  $current-width: 1360px;
 
   %main-content-wrap {
     @include main-content-warp-mixin($current-width);
   }
 }
 
-// 当屏幕尺寸大于980，小于1200px时
-@media only screen and (min-width: 980px) and (max-width: 1200px) {
+// 当屏幕尺寸大于980，小于1360px时
+@media only screen and (min-width: 980px) and (max-width: 1360px) {
   $current-width: 100%;
 
   %main-content-wrap {

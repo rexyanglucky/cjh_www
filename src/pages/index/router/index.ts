@@ -10,6 +10,34 @@ const routes: Array<RouteConfig> = [
     path: '/',
     component: () =>
       import(/* webpackChunkName: "basic-layout" */ '../layouts/basicLayout'),
+    children: [
+      {
+        path: 'index',
+        component: () =>
+          import(/* webpackChunkName: "page-index" */ '../views/index'),
+      },
+      {
+        path: 'region',
+        name: 'region',
+        component: () =>
+          import(/* webpackChunkName: "region" */ '../views/region'),
+      },
+      {
+        path: 'competition',
+        component: () =>
+          import(/* webpackChunkName: "competition" */ '../views/competition'),
+      },
+      {
+        path: 'history',
+        component: () =>
+          import(/* webpackChunkName: "history" */ '../views/history'),
+      },
+      {
+        path: 'works',
+        component: () =>
+          import(/* webpackChunkName: "works" */ '../views/works'),
+      },
+    ],
   },
 ];
 const router = new VueRouter({
