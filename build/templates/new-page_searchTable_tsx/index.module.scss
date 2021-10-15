@@ -1,0 +1,5 @@
+@import '@/common/styles/param.scss';
+
+.btn_op {
+  @extend %btn-link;
+}

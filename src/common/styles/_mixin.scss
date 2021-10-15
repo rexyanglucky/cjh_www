@@ -1,0 +1,48 @@
+/*
+* 三角形
+*/
+@mixin triangle-mixin($border-left:4px,$border-right:5px,$border-top:6px,$color:#363c4b) {
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-left: $border-left solid transparent;
+  border-right: $border-right solid transparent;
+  border-top: $border-top solid $color;
+  border-bottom: 0;
+  cursor: pointer;
+  &.left{
+    transform: rotate(90deg);
+  }
+  &.right{
+    transform: rotate(-90deg);
+  }
+  &.up{
+    transform: rotate(180deg);
+  }
+}
+@mixin triangle-empty-mixin($width:2px,$border-left:4px,$border-right:5px,$border-top:6px,$color:#363c4b,$bgcolor:#fff) {
+  position: relative;
+  &:before,&:after{
+    position: absolute;
+    content: '';
+    @include triangle-mixin($border-left, $border-right, $border-top, $color);
+  }
+  &:before{
+    bottom: 0px;
+    border-top-color: $color;
+  }
+  &:after{
+    bottom: $width;
+    border-top-color: $bgcolor;
+  }
+  &.left{
+    transform: rotate(90deg);
+  }
+  &.right{
+    transform: rotate(-90deg);
+  }
+  &.up{
+    transform: rotate(180deg);
+  }
+}

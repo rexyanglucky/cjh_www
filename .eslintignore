@@ -1,0 +1,11 @@
+/node_modules
+/src/lib
+/src/assets
+/acz-utils
+../acz-utils
+/byai-ckeditor5
+../byai-ckeditor5
+/build/**
+/public
+!.eslintrc.js
+!.prettierrc.js

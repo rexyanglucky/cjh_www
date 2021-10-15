@@ -1,0 +1,31 @@
+$circle-offset: 2px;
+$block-width: 1136px;
+$block-top-height: 256px;
+$circle-top-left-shape: circle at 0-$circle-offset 0px;
+$circle-top-right-shape: circle at $block-width/2+$circle-offset 0px;
+$circle-bottom-left-shape: circle at $block-width/2+$circle-offset $block-top-height;
+$circle-bottom-right-shape: circle at 0-$circle-offset $block-top-height;
+$circle-start-style: transparent 8px;
+$circle-top-end-style: #fafafa 0;
+$circle-bottom-end-style: #fff 0;
+.crop-top {
+  background: radial-gradient($circle-top-left-shape, $circle-start-style, $circle-top-end-style) top left, 
+  radial-gradient($circle-top-right-shape, $circle-start-style, $circle-top-end-style) top right; 
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: $circle-offset * 3;
+    width: $block-width - $circle-offset*6;
+    border-top: 1px dashed #E0E0E0;
+  }
+}
+.crop-bottom {
+  background: radial-gradient($circle-bottom-left-shape, $circle-start-style, $circle-bottom-end-style) bottom right, 
+  radial-gradient($circle-bottom-right-shape, $circle-start-style, $circle-bottom-end-style) bottom left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,219 @@
+@import "variable";
+
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+ol,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  border: none;
+  font-family:-apple-system , BlinkMacSystemFont , "Segoe UI" , Roboto , "Segoe UI" , "Helvetica Neue", "PingFang SC", "Noto Sans" , "Noto Sans CJK SC" , "Microsoft YaHei" , "微软雅黑" , sans-serif;
+  font-variant: tabular-nums;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+
+  &:hover {
+    outline: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+body {
+  // line-height: 1;
+  text-rendering: optimizeLegibility; // 当绘制文本时，浏览器会侧重文本的可读性（清晰度）
+  -webkit-font-smoothing: antialiased; // 平滑像素级别的字体
+  -moz-osx-font-smoothing: grayscale;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  border: 0;
+}
+
+ins {
+  color: #000;
+  text-decoration: none;
+  background-color: #ff9;
+}
+
+mark {
+  color: #000;
+  font-weight: bold;
+  font-style: italic;
+  background-color: #ff9;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 1em 0;
+  padding: 0;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+body {
+  font-size: 14px;
+}
+
+/* 清除浮动 */
+.clearFix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.clearFix {
+  zoom: 1;
+}
+
+.text-right {
+  text-align: right;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+$place-holder-color: #B6B6B6;
+
+@mixin inputPlaceholde($color:#B6B6B6) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $color;
+  }
+
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $color;
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $color;
+  }
+}
+
+textarea,
+input {
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  @include inputPlaceholde();
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  :root {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  width: 100vw;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0;
+}

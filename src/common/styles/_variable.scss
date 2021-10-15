@@ -1,0 +1,103 @@
+$--color-primary: #2069D9 !default;
+$--color-btn-text: #fff !default;
+$--color-btn-text-hover: rgba(#000, 0.85) !default;
+$--color-text-base: #0B244B !default;
+/// light
+/// color|1|Font Color|2
+$--color-text-primary: $--color-text-base !default;
+/// color|1|Font Color|2
+$--color-text-regular: rgba($--color-text-base, 0.85) !default;
+/// color|1|Font Color|2
+$--color-text-secondary: rgba($--color-text-base, 0.65) !default;
+/// color|1|Font Color|2
+$--color-text-placeholder: rgba($--color-text-base, 0.45) !default;
+$--color-text-light: rgba($--color-text-base, 0.35) !default;
+
+
+// /// dark
+// $--color-text-primary-dark: rgba(#fff, 0.95) !default;
+// $--color-text-normal-dark: rgba(#fff, 0.9) !default;
+// $--color-text-regular-dark: rgba(#fff, 0.60) !default;
+
+// /// color|1|Font Color|2
+// $--color-text-secondary-dark: rgba(#fff, 0.45) !default;
+// /// color|1|Font Color|2
+// $--color-text-placeholder-dark: rgba(#fff, 0.30) !default;
+// /// color|1|Border Color|3
+// $--border-color-base-dark: rgba(#fff, 0.20) !default;
+// /// color|1|Border Color|3
+// $--divider-color-base-dark: rgba(#fff, 0.12) !default;
+// /// color|1|Border Color|3
+// $--background-color-dark: rgba(#fff, 0.08) !default;
+// $--table-header-background-color-dark: rgba(#fff, 0.04) !default;
+
+
+$color-1: rgba($--color-primary, 0.25);
+$color-2: rgba($--color-primary, 0.35);
+$color-3: rgba($--color-primary, 0.45);
+$color-4: rgba($--color-primary, 0.65);
+$color-5: rgba($--color-primary, 0.85);
+$color-6: $--color-primary;
+// $color-7: #169bd9;
+$color-7: darken($--color-primary, 0.05);
+$color-8: darken($--color-primary, 0.25);
+$color-9: darken($--color-primary, 0.45);
+$color-10: darken($--color-primary, 0.65);
+$color-11: darken($--color-primary, 0.85);
+
+$color-auxiliary-yellow-base: #F59F3E;
+$color-auxiliary-yellow-1: rgba($color-auxiliary-yellow-base, 0.25);
+$color-auxiliary-yellow-2: rgba($color-auxiliary-yellow-base, 0.35);
+$color-auxiliary-yellow-3: rgba($color-auxiliary-yellow-base, 0.45);
+$color-auxiliary-yellow-4: rgba($color-auxiliary-yellow-base, 0.65);
+$color-auxiliary-yellow-5: rgba($color-auxiliary-yellow-base, 0.85);
+$color-auxiliary-yellow-6: $color-auxiliary-yellow-base;
+// $color-auxiliary-yellow-7: #169bd9;
+$color-auxiliary-yellow-7: darken($color-auxiliary-yellow-base, 0.05);
+$color-auxiliary-yellow-8: darken($color-auxiliary-yellow-base, 0.25);
+$color-auxiliary-yellow-9: darken($color-auxiliary-yellow-base, 0.45);
+$color-auxiliary-yellow-10: darken($color-auxiliary-yellow-base, 0.65);
+$color-auxiliary-yellow-11: darken($color-auxiliary-yellow-base, 0.85);
+
+
+$color-auxiliary-red-base: #FF5E45;
+$color-auxiliary-red-1: rgba($color-auxiliary-red-base, 0.15);
+$color-auxiliary-red-2: rgba($color-auxiliary-red-base, 0.25);
+$color-auxiliary-red-3: rgba($color-auxiliary-red-base, 0.45);
+$color-auxiliary-red-4: rgba($color-auxiliary-red-base, 0.65);
+$color-auxiliary-red-5: rgba($color-auxiliary-red-base, 0.85);
+$color-auxiliary-red-6: $color-auxiliary-red-base;
+// $color-auxiliary-red-7: #169bd9;
+$color-auxiliary-red-7: darken($color-auxiliary-red-base, 0.05);
+$color-auxiliary-red-8: darken($color-auxiliary-red-base, 0.25);
+$color-auxiliary-red-9: darken($color-auxiliary-red-base, 0.45);
+$color-auxiliary-red-10: darken($color-auxiliary-red-base, 0.65);
+$color-auxiliary-red-11: darken($color-auxiliary-red-base, 0.85);
+// $blue-1: #f0fdff;
+$color-auxiliary-blue-base: #3778FF;
+$color-auxiliary-blue-1: rgba($color-auxiliary-blue-base, 0.05);
+$color-auxiliary-blue-2: rgba($color-auxiliary-blue-base, 0.10);
+$color-auxiliary-blue-3: rgba($color-auxiliary-blue-base, 0.45);
+$color-auxiliary-blue-4: rgba($color-auxiliary-blue-base, 0.65);
+$color-auxiliary-blue-5: rgba($color-auxiliary-blue-base, 0.95);
+$color-auxiliary-blue-6: $color-auxiliary-blue-base;
+// $color-auxiliary-blue-7: #169bd9;
+$color-auxiliary-blue-7: darken($color-auxiliary-blue-base, 0.05);
+$color-auxiliary-blue-8: darken($color-auxiliary-blue-base, 0.25);
+$color-auxiliary-blue-9: darken($color-auxiliary-blue-base, 0.45);
+$color-auxiliary-blue-10: darken($color-auxiliary-blue-base, 0.65);
+$color-auxiliary-blue-11: darken($color-auxiliary-blue-base, 0.85);
+
+// $blue-2: #c9f7ff;
+// $blue-3: #a1eeff;
+// $blue-4: #78e2ff;
+// $blue-5: #4fd3ff;
+// $blue-6: $--color-primary;
+// // $blue-7: #169bd9;
+// $blue-7: #1890ff;
+// $blue-8: #0977b3;
+// $blue-9: #00568c;
+// $blue-10: #003c66;
+$mobile-screen-width: 980px;
+$pc-screen-small-width: 1278px;
+$pc-screen-big-width: 1600px;
