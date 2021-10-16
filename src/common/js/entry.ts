@@ -9,6 +9,7 @@
 import Vue from 'vue';
 import SvgIcon from 'vue-svgicon';
 import LoadScript from 'vue-plugin-load-script';
+import VueLazyload from 'vue-lazyload';
 import './flexible';
 import { elementInit } from './element';
 import '@/assets/svg/icons/index';
@@ -18,6 +19,7 @@ import '@/common/styles/global.scss';
 
 // 导入element
 elementInit.init(Vue);
+Vue.use(VueLazyload);
 Vue.use(SvgIcon, {
   tagName: 'SvgIcon',
 });

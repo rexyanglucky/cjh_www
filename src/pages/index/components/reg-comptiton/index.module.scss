@@ -1,0 +1,35 @@
+
+.region {
+  &__content {
+    padding-left: 225px;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    background: url('~@/assets/images/index/f9_bg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -230px;
+    .tips {
+      font-size: 18px;
+      font-weight: 500;
+      color: $--color-primary;
+
+      &_name {
+        font-size: 40px;
+        line-height: 1.5;
+        margin: 16px 0;
+      }
+    }
+
+    .btn_reg {
+      background: linear-gradient(123deg, #651BCC 0%, #1634D0 100%);
+      border-radius: 8px;
+      width: 200px;
+      height: 48px;
+      color: #fff;
+      border: none;
+    }
+  }
+}

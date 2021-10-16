@@ -8,13 +8,14 @@ body {
   $height: 72px;
   height: $height;
   background: #fff;
+  font-size: 14px;
 
   &_content {
     height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   .logo {
@@ -77,6 +78,8 @@ body {
       width: 78px;
       text-align: center;
       height: 40px;
+      padding: 0;
+      // line-height: 40px;
       border-color: $--color-primary;
       font-weight: normal;
     }

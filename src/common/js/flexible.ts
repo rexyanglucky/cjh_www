@@ -3,7 +3,8 @@ import { throttle } from 'lodash-es';
 function calcRemUnit() {
   if (document.documentElement) {
     const { clientWidth } = document.documentElement;
-    const uiWidth = 1200;
+    // const uiWidth = 1200;
+    const uiWidth = 1920;
     // const pcMinWidth = 980;
     const baseFontSize = 100;
     if (clientWidth >= uiWidth || (window as any).notCalcRem) {
