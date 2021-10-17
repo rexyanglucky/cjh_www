@@ -46,3 +46,10 @@
     transform: rotate(180deg);
   }
 }
+@mixin limitWordLine($lines){
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}

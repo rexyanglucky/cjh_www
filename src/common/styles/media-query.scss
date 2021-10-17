@@ -17,7 +17,8 @@
   $current-width: 100%;
 
   %main-content-wrap {
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     @include main-content-warp-mixin($current-width);
   }
 }
@@ -28,7 +29,8 @@
   $current-width: 100%;
 
   %main-content-wrap {
-    padding: 0 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     @include main-content-warp-mixin($current-width);
   }
 }

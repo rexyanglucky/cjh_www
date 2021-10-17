@@ -149,6 +149,7 @@ const config = {
       },
       externals: {
         MathJaxAPI: 'MathJaxAPI',
+        swiper: 'Swiper',
       },
       module: {
         rules: [

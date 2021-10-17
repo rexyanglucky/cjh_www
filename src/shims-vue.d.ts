@@ -5,6 +5,7 @@ declare module '*.vue' {
   }
   export default Custom;
 }
+declare module 'swiper';
 
 declare module '*.scss' {
   const res: any;
