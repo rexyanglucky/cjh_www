@@ -1,9 +1,5 @@
 @import '@/common/styles/param.scss';
 
-body {
-  background: purple !important;
-}
-
 .header {
   $height: 72px;
   height: $height;
@@ -101,12 +97,14 @@ body {
   &__inner {
     position: relative;
     padding: 10px 0 0 0;
+    background: url('~@/assets/images/index/f9_bg1.png');
     background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 26px 0 20px 80px;
     border-radius: 16px;
     width: 752px;
     height: 388px;
-
     &::before {
       content: '';
       position: absolute;
