@@ -234,8 +234,8 @@ const config = {
     },
   },
   productionSourceMap: true,
-  publicPath: '/gk/',
-  outputDir: process.env.NODE_ENV === 'production' ? 'dist/gk' : 'dist',
+  // publicPath: '/gk/',
+  // outputDir: process.env.NODE_ENV === 'production' ? 'dist/gk' : 'dist',
 };
 // 开发时设置mock
 if (process.env.NODE_ENV && process.env.NODE_ENV === 'development') {

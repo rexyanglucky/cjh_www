@@ -10,6 +10,7 @@ const routes: Array<RouteConfig> = [
     path: '/',
     component: () =>
       import(/* webpackChunkName: "basic-layout" */ '../layouts/basicLayout'),
+    redirect: '/index',
     children: [
       {
         path: 'index',
