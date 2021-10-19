@@ -24,6 +24,42 @@ const routes: Array<RouteConfig> = [
           import(/* webpackChunkName: "region" */ '../views/region'),
       },
       {
+        path: 'news/list/:region',
+        name: 'news-list',
+        meta: {
+          type: 1,
+        },
+        component: () =>
+          import(/* webpackChunkName: "news-list" */ '../views/news/list'),
+      },
+      {
+        path: 'news/detail/:region/:id',
+        name: 'news-detail',
+        meta: {
+          type: 1,
+        },
+        component: () =>
+          import(/* webpackChunkName: "news-detail" */ '../views/news/detail'),
+      },
+      {
+        path: 'notice/list/:region',
+        name: 'notice-list',
+        meta: {
+          type: 2,
+        },
+        component: () =>
+          import(/* webpackChunkName: "news-list" */ '../views/news/list'),
+      },
+      {
+        path: 'notice/detail/:region/:id',
+        name: 'notice-detail',
+        meta: {
+          type: 2,
+        },
+        component: () =>
+          import(/* webpackChunkName: "news-detail" */ '../views/news/detail'),
+      },
+      {
         path: 'competition',
         component: () =>
           import(/* webpackChunkName: "competition" */ '../views/competition'),

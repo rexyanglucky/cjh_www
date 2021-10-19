@@ -1,6 +1,9 @@
 .footer {
   min-height: 309px;
   background: #100A30;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 
   &__content {
     // width: 1360px;

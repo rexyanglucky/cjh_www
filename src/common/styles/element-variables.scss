@@ -58,9 +58,18 @@ $--input-focus-border: #ADAFB2;
 .el-button {
   border-radius: 8px;
 }
-.el-date-editor .el-range-separator{
+
+.el-date-editor .el-range-separator {
   padding: 0;
   width: 1em;
 }
 
+.el-breadcrumb__inner.is-link,
+.el-breadcrumb__inner a {
+  color: #616981;
+  font-weight: normal;
+}
 
+.el-breadcrumb__item:last-child .el-breadcrumb__inner {
+  color: #969CAD;
+}

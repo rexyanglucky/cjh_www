@@ -59,6 +59,7 @@ import Container from 'element-ui/lib/container';
 import Header from 'element-ui/lib/header';
 import Aside from 'element-ui/lib/aside';
 import Main from 'element-ui/lib/main';
+import Pagination from 'element-ui/lib/pagination';
 // import Message from 'element-ui/lib/message';
 
 export const elementInit = {
@@ -120,6 +121,7 @@ export const elementInit = {
     Vue.use(Aside);
     Vue.use(Main);
     Vue.use(Loading.directive);
+    Vue.use(Pagination);
     Vue.prototype.$message = Message;
     Vue.prototype.$msgbox = MessageBox;
     Vue.prototype.$alert = MessageBox.alert;

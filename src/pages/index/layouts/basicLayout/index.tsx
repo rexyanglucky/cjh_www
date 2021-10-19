@@ -3,6 +3,7 @@ import Header from '@/pages/index/components/header';
 import Footer from '@/pages/index/components/footer';
 import { isMobileDevice } from '@/utils/index';
 import './index.scss';
+import { NavigationGuardNext, Route } from 'vue-router';
 
 @Component({
   components: {
@@ -10,11 +11,16 @@ import './index.scss';
   },
 })
 export default class BasicLayout extends Vue {
+  beforeRouteUpdate(to: Route, from: Route, next: NavigationGuardNext<any>) {
+    next();
+  }
   render() {
     return (
       <div>
         <cjh-header></cjh-header>
-        <router-view></router-view>
+        <keep-alive>
+          <router-view></router-view>
+        </keep-alive>
         <Footer></Footer>
       </div>
     );

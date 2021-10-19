@@ -1,0 +1,9 @@
+@import '@/common/styles/param.scss';
+.empty {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    :global(.com-el-empty) {
+        flex: 1;
+      }
+}

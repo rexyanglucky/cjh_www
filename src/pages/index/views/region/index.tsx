@@ -65,7 +65,18 @@ export default class Preparation extends Vue {
       <section class={[style.block, style.news]}>
         <p class={style.block__title_wrap}>
           <span class={style.block__title}>新闻资讯</span>
-          <span class={style.block__more}>
+          <span
+            class={style.block__more}
+            onClick={() => {
+              const { id } = (this as any).$route.query;
+              (this as any).$router.push({
+                name: 'news-list',
+                params: {
+                  region: id,
+                },
+              });
+            }}
+          >
             <span>查看更多</span>
             <img src={require('@/assets/images/region/more.png')} alt="" />
           </span>
@@ -111,7 +122,18 @@ export default class Preparation extends Vue {
         <div class={[style.notice__inner]}>
           <p class={style.block__title_wrap}>
             <span class={style.block__title}>通知公告</span>
-            <span class={style.block__more}>
+            <span
+              class={style.block__more}
+              onClick={() => {
+                const { id } = (this as any).$route.query;
+                (this as any).$router.push({
+                  name: 'notice-list',
+                  params: {
+                    region: id,
+                  },
+                });
+              }}
+            >
               <span>查看更多</span>
               <img src={require('@/assets/images/region/more.png')} alt="" />
             </span>

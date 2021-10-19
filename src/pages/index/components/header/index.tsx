@@ -4,7 +4,7 @@ import style from './index.module.scss';
 
 import logo from '@/assets/logo.png';
 
-interface menu {
+export interface menu {
   name: string;
   type: 'link' | 'dropdown';
   link?: string;
@@ -78,8 +78,8 @@ export default class Header extends Vue {
 
   created() {
     this.menus.forEach((item) => {
-      if (this.$route.path === item.link) {
-        const { id } = this.$route.query;
+      if ((this as any).$route.path === item.link) {
+        const { id } = (this as any).$route.query;
         if (id) {
           const selectedSub = (item.subs || []).find((s) => s.id === +id);
           if (selectedSub) {
@@ -107,7 +107,7 @@ export default class Header extends Vue {
                 onClick={() => {
                   menu.selectedSub = item;
                   // this.curMenu = menu;
-                  this.$router.push({
+                  (this as any).$router.push({
                     name: 'region',
                     query: {
                       id: item.id,
@@ -134,7 +134,6 @@ export default class Header extends Vue {
   }
 
   render() {
-    console.log(this.$route);
     return (
       <div class={style.header}>
         <div class={[style.header_content, 'main-content-wrap']}>
@@ -160,7 +159,7 @@ export default class Header extends Vue {
                   <li
                     class={[
                       style.nav_item,
-                      this.$route.path === item.link
+                      (this as any).$route.path === item.link
                         ? style.nav_item_active
                         : '',
                     ]}
