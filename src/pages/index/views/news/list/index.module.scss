@@ -67,6 +67,23 @@
     @extend %main-content-wrap;
   }
 
+  .notice {
+    position: relative;
+    padding-left: 36px;
+    &::before {
+      content: '';
+      position:absolute;
+      left: 0;
+      top: 2px;
+      background: url('~@/assets/images/news/notice.png');
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-bottom: 16px;
+    }
+  }
+
   &__item {
     &::after {
       content: '';
@@ -75,6 +92,7 @@
       background: #ECEFF6;
       margin: 20px 0;
     }
+
     cursor: pointer;
     font-size: 14px;
 

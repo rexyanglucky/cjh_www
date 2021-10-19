@@ -197,44 +197,4 @@
     }
   }
 
-  .friendLink {
-    @extend %content-wrap;
-
-    background: #FFFFFF;
-    padding: 48px 0 40px 0;
-
-    &__list {
-      margin-left: -16px;
-    }
-
-    &__item {
-      min-width: 328px;
-      display: inline-block;
-      // height: 54px;
-      padding: 16px;
-      margin-top: 16px;
-      background: #FFFFFF;
-      box-shadow: 0px 5px 16px 0px rgba(17, 28, 65, 0.08);
-      border-radius: 4px;
-      padding-left: 16px;
-
-      // line-height: 54px;
-      // &:nth-child(4n+1) {
-      //   margin-left: 0;
-      // }
-      img {
-        vertical-align: middle;
-      }
-
-      &_name {
-        font-size: 16px;
-        color: #171717;
-        line-height: 22px;
-        margin-left: 9px;
-        vertical-align: middle;
-      }
-
-    }
-  }
-
 }

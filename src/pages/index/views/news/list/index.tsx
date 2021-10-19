@@ -6,6 +6,7 @@ import { ArticleQuery, getArticles } from './services';
 import VueRouter, { NavigationGuardNext, Route } from 'vue-router';
 import { getNewsDetailLocation } from '../utils';
 import dayjs from 'dayjs';
+import FriendLink from '@/pages/index/components/friend-link';
 
 @Component({
   components: {
@@ -42,7 +43,6 @@ export default class NewsList extends Vue {
   }
 
   beforeRouteUpdate(to: Route, from: Route, next: NavigationGuardNext<any>) {
-    alert(3);
     // const { meta } = to;
     // console.log(to);
     // if (meta) {
@@ -85,11 +85,10 @@ export default class NewsList extends Vue {
   renderItem({ item, index }: { item: Article; index: number }) {
     return (
       <article
-        class={style.news__item}
+        class={[style.news__item, item.type == 2 ? style.notice : '']}
         onClick={() => {
           const { params } = (this as any).$route;
           const obj = getNewsDetailLocation(params.region, item);
-          debugger;
           ((this as any).$router as VueRouter).push(obj);
         }}
       >
@@ -139,6 +138,7 @@ export default class NewsList extends Vue {
         {this.renderBanner()}
         {this.renderTab()}
         {this.renderList()}
+        <FriendLink></FriendLink>
       </div>
     );
   }

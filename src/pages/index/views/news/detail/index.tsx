@@ -14,7 +14,6 @@ export default class NewsDetail extends Vue {
   }
   renderBreadcrumb() {
     const $route = (this as any).$route as Route;
-    debugger;
     const { meta = {}, params } = $route;
     return (
       <div class={style.breadcrumb_wrap}>

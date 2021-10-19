@@ -2,6 +2,8 @@ const prefix = '/api';
 const timeout = 300;
 module.exports = {
   [`GET ${prefix}/api/articles`]: (req, res) => {
+    const { query } = req;
+    console.log(query);
     setTimeout(() => {
       const results = {
         code: 0,
@@ -18,7 +20,7 @@ module.exports = {
             qs: '',
             skip: 9,
           },
-          articles: new Array(9).fill({
+          articles: new Array(10).fill({
             id: '610a54532a732525f848bf56', //  id
             type: 1,
             title: '人教社回应英语教材出现“Wu Yifan” ：与涉案艺人无关',
