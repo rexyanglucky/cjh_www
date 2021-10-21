@@ -509,8 +509,12 @@
 .f9 {
   height: 720px;
   display: flex;
+  overflow: hidden;
   &__img {
-    width: 974px;
+    // width: 974px;
+    width: 100%;
+    margin-left: -450px;
+    margin-top: -50px;
     background: #171F4E;
     // float: left;
     position: relative;
@@ -524,15 +528,19 @@
       width: 86px;
       height: 122px;
       position: absolute;
-      right: 75px;
+      right: 575px;
       bottom: 28px;
+      z-index: 2;
     }
   }
 
   &__content {
     // margin-left: 974px;
+    margin-left: -500px;
+    background: #fff;
     height: 100%;
     // padding-left: 70px;
     flex: 1;
+    z-index: 1;
   }
 }

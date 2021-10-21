@@ -3,6 +3,7 @@ import style from './index.module.scss';
 import p2Img from '@/assets/images/index/p2.png';
 import f3_1 from '@/assets/images/index/f3_1.png';
 import f3_2 from '@/assets/images/index/f3_2.png';
+import ChinaMap from '../../components/china-map';
 import RegComptition from '../../components/reg-comptiton';
 // import p3Img from '@/assets/images/index/p3.png';
 @Component
@@ -251,16 +252,17 @@ export default class Preparation extends Vue {
     return (
       <section class={[style.floor, style.f9]}>
         <div class={style.f9__img}>
-          <img
+          {/* <img
             class={style.f9__img_1}
             v-lazy={require('@/assets/images/index/f9_1.png')}
             alt=""
-          />
+          />*/}
           <img
             class={style.f9__img_2}
             v-lazy={require('@/assets/images/index/f9_2.png')}
             alt=""
           />
+          <ChinaMap></ChinaMap>
         </div>
         <div class={style.f9__content}>
           <RegComptition></RegComptition>
