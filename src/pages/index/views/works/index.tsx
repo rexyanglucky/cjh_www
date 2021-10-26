@@ -50,11 +50,11 @@ export default class Works extends Vue {
   renderItem({ item, index }: { item: any; index: number }) {
     return (
       <li class={style.works__item}>
-        {/* <img class={style.works__item_img} src={item.img}></img> */}
-        <img
+        <el-image
           class={style.works__item_img}
           src={require('@/assets/images/history/c1.png')}
-        ></img>
+          preview-src-list={[require('@/assets/images/history/c1.png')]}
+        ></el-image>
         <div class={style.works__item_content}>
           <p class={style.works__item_title}>{item.title}</p>
           <p class={style.works__item_tips}>#创计划</p>

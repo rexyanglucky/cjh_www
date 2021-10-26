@@ -18,9 +18,9 @@ export default class BasicLayout extends Vue {
     return (
       <div>
         <cjh-header></cjh-header>
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
+        {/* <keep-alive> */}
+        <router-view></router-view>
+        {/* </keep-alive> */}
         <Footer></Footer>
       </div>
     );

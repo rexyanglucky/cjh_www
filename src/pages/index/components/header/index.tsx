@@ -148,7 +148,7 @@ export default class Header extends Vue {
                     to={{ path: item.link }}
                     tag="li"
                     class={style.nav_item}
-                    exact
+                    // exact
                     active-class={style.nav_item_active}
                   >
                     <span class={style.nav_item__content}>{item.name}</span>

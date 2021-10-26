@@ -1,0 +1,66 @@
+@import '@/common/styles/param.scss';
+
+.competition_intro {
+
+  .block {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 0 32px;
+    margin-bottom: 48px;
+
+    &__title {
+      height: 48px;
+      background: url('~@/assets/images/competition/title-bg.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-align: center;
+      line-height: 48px;
+      width: 164px;
+      color: rgba(255, 255, 255, 1);
+      font-size: 18px;
+      position: relative;
+      top: -24px;
+      margin: 0 auto;
+    }
+
+    &__content {}
+
+    &.b1 {
+      margin-top: 96px;
+
+      .block__content {
+        padding: 48px 0 54px 0;
+        line-height: 2;
+        font-size: 18px;
+
+        p+p {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    &.b3 {
+      margin-top: 96px;
+
+      .block__content {
+        padding: 48px 0 54px 0;
+        line-height: 2;
+        font-size: 18px;
+
+        p+p,
+        p+h4 {
+          margin-top: 24px;
+        }
+
+      }
+
+
+    }
+
+    .warn {
+      font-size: 18px;
+      color: #F35F5F;
+      line-height: 36px;
+    }
+  }
+}

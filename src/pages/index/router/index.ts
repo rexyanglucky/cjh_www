@@ -3,6 +3,8 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 
 import NotFoundComponent from '../components/404';
+import competition from './competition';
+
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
@@ -60,11 +62,6 @@ const routes: Array<RouteConfig> = [
           import(/* webpackChunkName: "news-detail" */ '../views/news/detail'),
       },
       {
-        path: 'competition',
-        component: () =>
-          import(/* webpackChunkName: "competition" */ '../views/competition'),
-      },
-      {
         path: 'history',
         component: () =>
           import(/* webpackChunkName: "history" */ '../views/history'),
@@ -74,6 +71,7 @@ const routes: Array<RouteConfig> = [
         component: () =>
           import(/* webpackChunkName: "works" */ '../views/works'),
       },
+      ...competition,
     ],
   },
 ];

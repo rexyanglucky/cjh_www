@@ -187,6 +187,7 @@ export default {
   .page-warp {
     width: 100%;
     margin: 44px 0 44px 0;
+    text-align: center;
   }
 }
 </style>
