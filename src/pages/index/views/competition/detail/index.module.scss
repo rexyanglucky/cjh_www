@@ -1,5 +1,91 @@
 @import '@/common/styles/param.scss';
 
-.demo {
-  background: red;
+.competition_intro {
+
+  .block {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 0 32px;
+    margin-bottom: 48px;
+    text-align: center;
+
+    &__title {
+      height: 48px;
+      background: url('~@/assets/images/competition/title-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-align: center;
+      line-height: 48px;
+      min-width: 164px;
+      padding: 0 16px;
+      color: rgba(255, 255, 255, 1);
+      font-size: 18px;
+      position: relative;
+      top: -24px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+
+    &__content {
+      padding: 48px 0 54px 0;
+      text-align: left;
+      line-height: 2;
+      font-size: 18px;
+      // margin-top: 96px;
+
+      p+p {
+        margin-top: 12px;
+      }
+      article {
+        margin-top: 48px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      h4 {
+        margin-top: 24px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    
+      h4+section {
+        margin-top: 12px;
+        padding-left: 32px;
+      }
+
+      .tips {
+        color: #847E8C;
+        line-height: 36px;
+        margin-top: 4px;
+      }
+    }
+
+    &.b1 {
+      margin-top: 96px;
+
+    }
+  }
+
+  .subject {
+    text-align: center;
+    .subject_title {
+      height: 36px;
+      background: #ECEFF8;
+      border: 1px solid #ECEFF8;
+      font-weight: 500;
+      color: #2B292D;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 18px 0;
+        border: 1px solid #ECEFF8;
+      }
+    }
+  }
 }

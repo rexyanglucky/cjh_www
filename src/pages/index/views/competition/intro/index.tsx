@@ -2,7 +2,7 @@ import { Component, Vue } from 'vue-property-decorator';
 import style from './index.module.scss';
 
 @Component
-export default class Preparation extends Vue {
+export default class Intro extends Vue {
   renderB1() {
     return (
       <section class={[style.block, style.b1]}>
@@ -16,6 +16,52 @@ export default class Preparation extends Vue {
           </p>
         </div>
       </section>
+    );
+  }
+  renderTimeLine() {
+    const actives = [
+      {
+        timestamp: '9.30-10.10',
+        content: '报名并参与测评',
+      },
+      {
+        timestamp: '10.12-10.18',
+        content: (
+          <p>
+            公布测评结果及
+            <br />
+            赛前培训
+          </p>
+        ),
+      },
+      {
+        timestamp: '10.29-11.1',
+        content: '上传作品',
+      },
+      {
+        timestamp: '11.2',
+        content: '专家评审',
+      },
+      {
+        timestamp: '11.3',
+        content: '获奖公示',
+      },
+    ];
+    return (
+      <div class={[style.block, style.timeline]}>
+        <p class={style.block__title}>活动时间</p>
+        <div class={style.block__content}>
+          <div class={style.timeline_wrap}>
+            {actives.map((item) => (
+              <p class={style.timeline__item}>
+                <p class={style.timeline__item_timestamp}>{item.timestamp}</p>
+                <p class={style.timeline__item_dot}></p>
+                <p class={style.timeline__item_label}>{item.content}</p>
+              </p>
+            ))}
+          </div>
+        </div>
+      </div>
     );
   }
   renderB3() {
@@ -49,6 +95,7 @@ export default class Preparation extends Vue {
     return (
       <div class={style.competition_intro}>
         {this.renderB1()}
+        {this.renderTimeLine()}
         {this.renderB3()}
       </div>
     );
